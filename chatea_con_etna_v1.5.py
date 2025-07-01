@@ -6,6 +6,12 @@ from dotenv import load_dotenv
 import streamlit as st
 from openai import OpenAI
 
+# Configuración para despliegue
+#if not os.path.exists('.env'):
+    # Si no hay archivo .env, usar variables de entorno del sistema
+    #os.environ.setdefault('OPENAI_API_KEY', os.getenv('OPENAI_API_KEY', ''))
+    #os.environ.setdefault('ASSISTANT_ID', os.getenv('ASSISTANT_ID', ''))
+    
 # ——— Cargar variables de entorno ———
 load_dotenv()
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
